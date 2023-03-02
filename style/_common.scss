@@ -1,0 +1,44 @@
+
+/* reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+li {
+    list-style: none;
+}
+
+/* font-family */
+
+// font-family: 'NanumSquareRoundL';
+// font-family: 'NanumSquareRound';
+// font-family: 'NanumSquareRoundB';
+// font-family: 'NanumSquareRoundEB';
+
+/* mixin */
+
+@mixin backGround($url, $size) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: $size;
+}
+
+.wrap {
+    @include backGround(url('../images/bg.jpg'), cover);
+    max-width: 480px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+#header {
+    height: 80px;
+    background-color: $color_skyblue;
+}

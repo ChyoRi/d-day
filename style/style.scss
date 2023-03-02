@@ -1,0 +1,12 @@
+@charset "utf-8";
+
+@import './varible.scss';
+@import './common.scss';
+@import './component.scss';
+
+#header > h1 {
+    line-height: 80px;
+    font-family: 'NanumSquareRoundEB';
+    text-align: center;
+    color: $color_white;
+}

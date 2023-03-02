@@ -1,0 +1,38 @@
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+li {
+  list-style: none;
+}
+
+/* font-family */
+/* mixin */
+.wrap {
+  background-image: url("../images/bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 480px;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#header {
+  height: 80px;
+  background-color: skyblue;
+}
+
+#header > h1 {
+  line-height: 80px;
+  font-family: "NanumSquareRoundEB";
+  text-align: center;
+  color: #fff;
+}
