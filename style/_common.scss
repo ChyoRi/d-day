@@ -15,6 +15,20 @@ li {
     list-style: none;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
 /* font-family */
 
 // font-family: 'NanumSquareRoundL';
@@ -31,14 +45,43 @@ li {
     background-size: $size;
 }
 
+@mixin flex ($justfy-content: flex-start) {
+    display: flex;
+    align-items: center;
+    justify-content: $justfy-content;
+}
+
 .wrap {
     @include backGround(url('../images/bg.jpg'), cover);
+    position: relative;
     max-width: 480px;
     height: 100%;
     margin: 0 auto;
 }
 
 #header {
+    @include flex(space-between);
     height: 80px;
-    background-color: $color_skyblue;
+    padding: 0 20px;
+    font-family: 'NanumSquareRoundEB';
+    vertical-align: middle;
+    background-color: $color-skyblue;
+}
+
+#header > .today {
+    font-size: 32px;
+    background-color: $color-skyblue;
+    color: $color-white;
+}
+
+.addmodal {
+    position: absolute;
+    width: 80%;
+    height: 50%;
+    top: 50%;
+    left: 50%;
+    padding: 30px;
+    border-radius: $border-radius-small;
+    background-color: $color-white;
+    transform: translate(-50%, -50%);
 }

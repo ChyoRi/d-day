@@ -6,7 +6,45 @@
 
 #header > h1 {
     line-height: 80px;
-    font-family: 'NanumSquareRoundEB';
     text-align: center;
-    color: $color_white;
+    color: $color-white;
+}
+
+.wrap > .addition {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    width: 100px;
+    height: 100px;
+    border-radius: $border-radius-circle;
+    color: $color-white;
+    font-family: 'NanumSquareRoundEB';
+    font-size: 50px;
+    background-color: $color-skyblue;
+}
+
+.title_wrap > input[type="text"] {
+    width: 100%;
+    border-bottom: 2px solid $color-skyblue;
+    font-family: 'NanumSquareRoundEB';
+    font-size: 24px;
+}
+
+.date_wrap {
+    margin-top: 30px;
+}
+
+.calculate {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: $border-radius-small;
+    font-family: 'NanumSquareRoundEB';
+    font-size: 24px;
+    color: $color-black;
+    background-color: $color-panton;
+
+    &:hover {
+        color: $color-white;
+        background-color: $color-skyblue;
+    }
 }

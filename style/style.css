@@ -13,6 +13,19 @@ li {
   list-style: none;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+input {
+  border: none;
+}
+input:focus {
+  outline: none;
+}
+
 /* font-family */
 /* mixin */
 .wrap {
@@ -20,19 +33,81 @@ li {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
   max-width: 480px;
   height: 100%;
   margin: 0 auto;
 }
 
 #header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: 80px;
-  background-color: skyblue;
+  padding: 0 20px;
+  font-family: "NanumSquareRoundEB";
+  vertical-align: middle;
+  background-color: #cae9f3;
+}
+
+#header > .today {
+  font-size: 32px;
+  background-color: #cae9f3;
+  color: #fff;
+}
+
+.addmodal {
+  position: absolute;
+  width: 80%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
 }
 
 #header > h1 {
   line-height: 80px;
-  font-family: "NanumSquareRoundEB";
   text-align: center;
   color: #fff;
+}
+
+.wrap > .addition {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  color: #fff;
+  font-family: "NanumSquareRoundEB";
+  font-size: 50px;
+  background-color: #cae9f3;
+}
+
+.title_wrap > input[type=text] {
+  width: 100%;
+  border-bottom: 2px solid #cae9f3;
+  font-family: "NanumSquareRoundEB";
+  font-size: 24px;
+}
+
+.date_wrap {
+  margin-top: 30px;
+}
+
+.calculate {
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 5px;
+  font-family: "NanumSquareRoundEB";
+  font-size: 24px;
+  color: #000;
+  background-color: #91a8d1;
+}
+.calculate:hover {
+  color: #fff;
+  background-color: #cae9f3;
 }
