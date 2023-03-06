@@ -67,10 +67,10 @@ input:focus {
 }
 
 .addmodal {
-  display: none;
-  flex-direction: column;
+  display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: column;
   position: absolute;
   width: 80%;
   height: 30%;
@@ -79,7 +79,9 @@ input:focus {
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
+  opacity: 0;
   transform: translate(-50%, -50%);
+  transition: 0.5s;
 }
 
 /* 헤더 */

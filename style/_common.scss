@@ -85,10 +85,8 @@ input {
 }
 
 .addmodal {
-    display: none;
+    @include flex(space-between);
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     position: absolute;
     width: 80%;
     height: 30%;
@@ -97,5 +95,7 @@ input {
     padding: 30px;
     border-radius: $border-radius-small;
     background-color: $color-white;
+    opacity: 0;
     transform: translate(-50%, -50%);
+    transition: 0.5s;
 }

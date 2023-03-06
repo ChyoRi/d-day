@@ -27,7 +27,7 @@ toDateSpan.innerText =  toDate + '일';
 // D-DAY 모달 Open 함수
 
 const addModalOpen = () => {
-    addModal.style.display = 'flex';
+    addModal.style.opacity = '1';
 }
 
 // list print
@@ -36,7 +36,7 @@ const makeList = (ddayTitle, dday) => {
     const ddayWrap = document.querySelector('.dday-list-wrap');
     let list = document.createElement('li');
     list.classList.add('dday-list');
-    list.innerHtml = `
+    list.innerHTML = `
         <div class="thumb"></div>
         <h3 class="dday-title">${ddayTitle}</h3>
         <div class="dday-wrap">
@@ -54,7 +54,7 @@ const addDate = () => {
     let ddayTitle = dateTitle.value;
     let dday = dateInput.value;
     makeList(ddayTitle, dday);
-    addModal.style.display = 'none';
+    addModal.style.opacity = '0';
 }
 
 // 이벤트 리스너
