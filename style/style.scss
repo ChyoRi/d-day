@@ -4,13 +4,15 @@
 @import './common.scss';
 @import './component.scss';
 
+/* 헤더 */
+
 #header > h1 {
     line-height: 80px;
     text-align: center;
     color: $color-white;
 }
 
-.wrap > .addition {
+.wrap > .add-modal-btn {
     position: absolute;
     bottom: 30px;
     right: 30px;
@@ -23,6 +25,10 @@
     background-color: $color-skyblue;
 }
 
+.title_wrap {
+    align-self: flex-start;
+}
+
 .title_wrap > input[type="text"] {
     width: 100%;
     border-bottom: 2px solid $color-skyblue;
@@ -31,20 +37,37 @@
 }
 
 .date_wrap {
-    margin-top: 30px;
+    font-family: 'NanumSquareRoundEB';
+    font-size: 20px;
+
+    & input[type="date"] {
+        font-family: 'NanumSquareRoundEB';
+        font-size: 19px;
+    }
 }
 
-.calculate {
+.add {
     width: 100%;
     padding: 10px 0;
     border-radius: $border-radius-small;
     font-family: 'NanumSquareRoundEB';
     font-size: 24px;
-    color: $color-black;
-    background-color: $color-panton;
+    color: $color-white;
+    background-color: $color-skyblue;
+    transform: translateY(0);
+    transition: 0.3s;
+    box-shadow: 5px $color-black;
 
     &:hover {
-        color: $color-white;
-        background-color: $color-skyblue;
+        transform: translateY(-10px);
+        box-shadow: 0 5px 5px $color-gray;
     }
+}
+
+.dday-list {
+    @include flex(space-between);
+    height: 15%;
+    margin: 30px 0;
+    border-radius: $border-radius-middle;
+    background-color: $color-white;
 }

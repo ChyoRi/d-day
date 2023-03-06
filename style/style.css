@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset */
 * {
   margin: 0;
@@ -56,10 +57,23 @@ input:focus {
   color: #fff;
 }
 
+#main {
+  padding: 0 30px;
+  height: calc(100vh - 80px);
+}
+#main .dday-list-wrap {
+  height: 100%;
+  margin-top: 30px;
+}
+
 .addmodal {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   width: 80%;
-  height: 50%;
+  height: 30%;
   top: 50%;
   left: 50%;
   padding: 30px;
@@ -68,13 +82,14 @@ input:focus {
   transform: translate(-50%, -50%);
 }
 
+/* 헤더 */
 #header > h1 {
   line-height: 80px;
   text-align: center;
   color: #fff;
 }
 
-.wrap > .addition {
+.wrap > .add-modal-btn {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -87,6 +102,10 @@ input:focus {
   background-color: #cae9f3;
 }
 
+.title_wrap {
+  align-self: flex-start;
+}
+
 .title_wrap > input[type=text] {
   width: 100%;
   border-bottom: 2px solid #cae9f3;
@@ -95,19 +114,37 @@ input:focus {
 }
 
 .date_wrap {
-  margin-top: 30px;
+  font-family: "NanumSquareRoundEB";
+  font-size: 20px;
+}
+.date_wrap input[type=date] {
+  font-family: "NanumSquareRoundEB";
+  font-size: 19px;
 }
 
-.calculate {
+.add {
   width: 100%;
   padding: 10px 0;
   border-radius: 5px;
   font-family: "NanumSquareRoundEB";
   font-size: 24px;
-  color: #000;
-  background-color: #91a8d1;
-}
-.calculate:hover {
   color: #fff;
   background-color: #cae9f3;
+  transform: translateY(0);
+  transition: 0.3s;
+  box-shadow: 5px #000;
+}
+.add:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 5px #ccc;
+}
+
+.dday-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 15%;
+  margin: 30px 0;
+  border-radius: 30px;
+  background-color: #fff;
 }
