@@ -6,13 +6,13 @@ const toDateSpan = document.querySelector('.to-date');
 const addModal = document.querySelector('.addmodal');
 const addModalBtn = document.querySelector('.add-modal-btn');
 
-/* Modal 관련 */
+// Modal 관련 변수
 
 const dateTitle = document.querySelector('#date-title');
 const dateInput = document.querySelector('#date');
 const addBtn = document.querySelector('.add');
 
-/* 오늘 날짜 */
+// 오늘 날짜 
 
 const toDayDate = new Date();
 
@@ -32,7 +32,7 @@ const addModalOpen = () => {
 
 // list print
 
-const makeList = (ddayTitle, dday) => {
+const makeList = (ddayTitle, dday, ddayCalc) => {
     const ddayWrap = document.querySelector('.dday-list-wrap');
     let list = document.createElement('li');
     list.classList.add('dday-list');
@@ -40,20 +40,29 @@ const makeList = (ddayTitle, dday) => {
         <div class="thumb"></div>
         <h3 class="dday-title">${ddayTitle}</h3>
         <div class="dday-wrap">
-            <span class="dday"></span>
-            <span class="criterion">${dday}{</span>
+            <span class="dday">D${ddayCalc}</span>
+            <span class="criterion">${dday}</span>
         </div>
     `;
 
     ddayWrap.appendChild(list);
 }
 
-// D-day 추가 함수
+// D-day 추가 & 계산 함수
 
 const addDate = () => {
     let ddayTitle = dateTitle.value;
     let dday = dateInput.value;
-    makeList(ddayTitle, dday);
+    let criterionDay = new Date(dday);
+    let criterionDayMs = criterionDay.getTime();
+    let ddayCalc = toDayDate - criterionDayMs;
+    ddayCalc = Math.round(ddayCalc / (1000*60*60*24)); 
+
+    if (ddayCalc > 0) {
+        ddayCalc =  '+' + ddayCalc
+    }
+
+    makeList(ddayTitle, dday, ddayCalc);
     addModal.style.opacity = '0';
 }
 
