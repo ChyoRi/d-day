@@ -63,6 +63,15 @@
     }
 }
 
+.exit {
+    @include backGround(url('../images/x.svg'), contain);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
 .dday-list {
     @include flex(space-between);
     height: 15%;

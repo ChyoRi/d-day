@@ -141,6 +141,18 @@ input:focus {
   box-shadow: 0 5px 5px #ccc;
 }
 
+.exit {
+  background-image: url("../images/x.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
 .dday-list {
   display: flex;
   align-items: center;

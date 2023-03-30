@@ -11,6 +11,7 @@ const addModalBtn = document.querySelector('.add-modal-btn');
 const dateTitle = document.querySelector('#date-title');
 const dateInput = document.querySelector('#date');
 const addBtn = document.querySelector('.add');
+const exitBtn = document.querySelector('.exit');
 
 // 오늘 날짜 
 
@@ -28,6 +29,12 @@ toDateSpan.innerText =  toDate + '일';
 
 const addModalOpen = () => {
     addModal.style.opacity = '1';
+}
+
+// D-DAY 모달 Exit 함수
+
+const modalExit = () => {
+    addModal.style.opacity = '0';
 }
 
 // list print
@@ -70,3 +77,4 @@ const addDate = () => {
 
 addModalBtn.addEventListener('click', addModalOpen);
 addBtn.addEventListener('click', addDate);
+exitBtn.addEventListener('click', modalExit);
