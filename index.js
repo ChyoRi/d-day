@@ -13,8 +13,8 @@ const createInput = document.querySelector('#date'); // D-Day 추가 모달에 D
 const submitButton = document.querySelector('.add'); // D-Day 추가 모달에 저장 버튼
 
 const delay = (s) => {
-    return new Promise((fulfilled, rejected) => {
-        setTimeout(() => fulfilled(), s);
+    return new Promise((success) => {
+        setTimeout(() => success(), s);
     });
 }
 
