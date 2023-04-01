@@ -75,6 +75,10 @@ input {
     font-size: 32px;
     background-color: $color-skyblue;
     color: $color-white;
+
+    .today-text {
+        font-size: 30px;
+    }
 }
 
 /* 메인 */
@@ -100,8 +104,9 @@ input {
     padding: 30px;
     border-radius: $border-radius-small;
     background-color: $color-white;
-    opacity: 0;
+    // opacity: 0;
     transform: translate(-50%, -50%);
-    transition: 0.5s;
+    // transition: 0.5s;
     z-index: 2;
+    display: none;
 }

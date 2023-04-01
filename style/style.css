@@ -58,6 +58,9 @@ input:focus {
   background-color: #cae9f3;
   color: #fff;
 }
+#header > .today .today-text {
+  font-size: 30px;
+}
 
 /* 메인 */
 #main {
@@ -82,10 +85,9 @@ input:focus {
   padding: 30px;
   border-radius: 5px;
   background-color: #fff;
-  opacity: 0;
   transform: translate(-50%, -50%);
-  transition: 0.5s;
   z-index: 2;
+  display: none;
 }
 
 /* 헤더 */
@@ -106,6 +108,7 @@ input:focus {
   font-family: "NanumSquareRoundEB";
   font-size: 50px;
   background-color: #cae9f3;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1882352941), 0 0 5px rgba(255, 255, 255, 0.3137254902) inset;
 }
 
 .dim {
@@ -117,6 +120,8 @@ input:focus {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .title-wrap {
@@ -198,6 +203,20 @@ input:focus {
   margin-bottom: 5px;
   font-family: "NanumSquareRoundEB";
   font-size: 28px;
+  padding: 0 4px;
+  transition: 0.2s;
+}
+.dday-list > .dday-title-wrap > h3 > span:hover {
+  border: 1px solid #aaa;
+}
+.dday-list > .dday-title-wrap > h3 > input {
+  border: 1px solid #aaa;
+  width: 100px;
+  height: 32px;
+  padding: 0 5px;
+  border-radius: 4px;
+  font-size: 15px;
+  letter-spacing: 1px;
 }
 .dday-list > .dday-title-wrap > .criterion {
   font-family: "NanumSquareRoundB";
@@ -217,3 +236,19 @@ input:focus {
   background-color: #fe8b87;
   color: #fff;
 }
+
+.none-item {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #888888;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+}
+.none-item > b {
+  color: #777777;
+  font-size: 22px;
+}/*# sourceMappingURL=style.css.map */
