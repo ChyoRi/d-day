@@ -18,11 +18,11 @@ const delay = (s) => {
     });
 }
 
-const error = (s) => {
-    return new Promise((fulfilled, rejected) => {
-        setTimeout(() => rejected(), s);
-    });
-}
+// const error = (s) => {
+//     return new Promise((fulfilled, rejected) => {
+//         setTimeout(() => rejected(), s);
+//     });
+// }
 
 // 비동기
 // error().then(() => {
