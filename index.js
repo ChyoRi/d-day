@@ -203,7 +203,7 @@ const vaildate = () => {
     let now = new Date();
     let targetDate = new Date(date);
     let calc = Math.floor((now - targetDate) / 1000 / 60 / 60 / 24);
-    let unit = calc > 0 ? '-' : '+';
+    let unit = calc < 0 ? '-' : '+';
     let result = `D${unit}${Math.abs(calc)}`;
 
     submit({title, date, result});

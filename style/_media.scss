@@ -1,4 +1,4 @@
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
     html {
         font-size: 50%;
     }
@@ -15,7 +15,7 @@
 }
 
 
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
     html {
         font-size: 36%;
     }
@@ -30,7 +30,7 @@
     }
 }
 
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
     .dday-list {
         & > .thumb {
             margin-right: 0;

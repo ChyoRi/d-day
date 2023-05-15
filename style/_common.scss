@@ -88,14 +88,14 @@ input {
 }
 
 .addmodal {
-    @include flex(space-between);
+    @include flex(center, space-between);
     flex-direction: column;
     position: absolute;
     width: 80%;
     height: 30%;
     top: 50%;
     left: 50%;
-    padding: 30px;
+    padding: 25px;
     border-radius: $border-radius-small;
     background-color: $color-white;
     // opacity: 0;

@@ -63,11 +63,11 @@
 
 .date-wrap {
     font-family: 'NanumSquareRoundEB';
-    font-size: 2rem;
+    font-size: 1.7rem;
 
     & input[type="date"] {
         font-family: 'NanumSquareRoundEB';
-        font-size: 1.9rem;
+        font-size: 1.7rem;
     }
 }
 
@@ -155,6 +155,7 @@
         color: $color-red;
         font-family: 'NanumSquareRoundEB';
         font-size: 3.2rem;
+        white-space: nowrap;
     }
 
     .ddaybtn-wrap > button {

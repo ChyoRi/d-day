@@ -69,15 +69,15 @@ input:focus {
 
 .addmodal {
   display: flex;
-  align-items: space-between;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
   position: absolute;
   width: 80%;
   height: 30%;
   top: 50%;
   left: 50%;
-  padding: 30px;
+  padding: 25px;
   border-radius: 5px;
   background-color: #fff;
   transform: translate(-50%, -50%);
@@ -85,7 +85,7 @@ input:focus {
   display: none;
 }
 
-@media (max-width: 420px) {
+@media screen and (max-width: 420px) {
   html {
     font-size: 50%;
   }
@@ -96,7 +96,7 @@ input:focus {
     font-size: 3.2rem;
   }
 }
-@media (max-width: 360px) {
+@media screen and (max-width: 360px) {
   html {
     font-size: 36%;
   }
@@ -107,7 +107,7 @@ input:focus {
     margin-right: 10px;
   }
 }
-@media (max-width: 320px) {
+@media screen and (max-width: 320px) {
   .dday-list > .thumb {
     margin-right: 0;
   }
@@ -170,11 +170,11 @@ input:focus {
 
 .date-wrap {
   font-family: "NanumSquareRoundEB";
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .date-wrap input[type=date] {
   font-family: "NanumSquareRoundEB";
-  font-size: 1.9rem;
+  font-size: 1.7rem;
 }
 
 .add {
@@ -260,6 +260,7 @@ input:focus {
   color: #fe8b87;
   font-family: "NanumSquareRoundEB";
   font-size: 3.2rem;
+  white-space: nowrap;
 }
 .dday-list .ddaybtn-wrap > button {
   font-family: "NanumSquareRoundEB";
