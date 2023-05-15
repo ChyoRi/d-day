@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D-day</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/17aea16ae4.js" crossorigin="anonymous"></script>
     <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square-round.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
@@ -26,9 +28,10 @@
                 <input id="date-title" type="text" placeholder="디데이 제목을 입력해주세요.">
             </div>
             <div class="date-wrap">
-                <label for="date">기준일을 선택하세요:
-                    <input type="date" id="date" min="1899-01-01" max="2199-12-12">
+                <label for="date">기준일을 선택하세요: 연도-월-일
+                    <i class="fa-regular fa-calendar"></i>
                 </label>
+                <input type="date" id="date" min="1899-01-01" max="2199-12-12">
             </div>
             <button class="exit"></button>
             <button class="add">추가하기</button>

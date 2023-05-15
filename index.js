@@ -11,6 +11,8 @@ const modalBackground = document.querySelector('.dim'); // D-Day 추가 모달 D
 const createTitle = document.querySelector('#date-title'); // D-Day 추가 모달에 제목
 const createInput = document.querySelector('#date'); // D-Day 추가 모달에 Date input
 const submitButton = document.querySelector('.add'); // D-Day 추가 모달에 저장 버튼
+const dateLabel = document.querySelector('label[for="date"]');
+const dateInput = document.querySelector('input[type="date"]');
 
 const delay = (s) => {
     return new Promise((success) => {
@@ -209,11 +211,18 @@ const vaildate = () => {
     submit({title, date, result});
 }
 
+// 달력 input 보이기
+
+const dateInputOn = () => {
+    dateInput.style.display = 'block';
+}
+
 // 이벤트 리스너
 plusButton.addEventListener('click', modalOpen);
 modalBackground.addEventListener('click', modalClose);
 createModalCloseButton.addEventListener('click', modalClose);
 submitButton.addEventListener('click', vaildate);
+dateLabel.addEventListener('click', dateInputOn);
 
 // init
 init();
