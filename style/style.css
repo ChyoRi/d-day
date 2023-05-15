@@ -238,6 +238,10 @@ input:focus {
   padding: 0 4px;
   transition: 0.2s;
 }
+.dday-list > .dday-title-wrap > h3 > span {
+  font-size: 2.4rem;
+  white-space: nowrap;
+}
 .dday-list > .dday-title-wrap > h3 > span:hover {
   border: 1px solid #aaa;
 }
@@ -259,7 +263,7 @@ input:focus {
   margin-right: 6%;
   color: #fe8b87;
   font-family: "NanumSquareRoundEB";
-  font-size: 3.2rem;
+  font-size: 3rem;
   white-space: nowrap;
 }
 .dday-list .ddaybtn-wrap > button {

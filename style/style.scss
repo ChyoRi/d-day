@@ -125,7 +125,8 @@
             transition: .2s;
 
             & > span {
-                // border: 1px solid transparent;
+                font-size: 2.4rem;
+                white-space: nowrap;
                 &:hover {
                     border: 1px solid #aaa;
                 }
@@ -154,7 +155,7 @@
         margin-right: 6%;
         color: $color-red;
         font-family: 'NanumSquareRoundEB';
-        font-size: 3.2rem;
+        font-size: 3rem;
         white-space: nowrap;
     }
 
