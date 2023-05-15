@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 body {
     height: 100vh;
     overflow-y: hidden;
@@ -46,9 +50,9 @@ input {
     background-size: $size;
 }
 
-@mixin flex ($justfy-content: flex-start) {
+@mixin flex ($align-items: center, $justfy-content: flex-start) {
     display: flex;
-    align-items: center;
+    align-items: $align-items;
     justify-content: $justfy-content;
 }
 
@@ -63,22 +67,12 @@ input {
 /* 헤더 */
 
 #header {
-    @include flex(space-between);
+    @include flex(baseline, space-between);
     height: 80px;
     padding: 0 20px;
     font-family: 'NanumSquareRoundEB';
     vertical-align: middle;
     background-color: $color-skyblue;
-}
-
-#header > .today {
-    font-size: 32px;
-    background-color: $color-skyblue;
-    color: $color-white;
-
-    .today-text {
-        font-size: 30px;
-    }
 }
 
 /* 메인 */

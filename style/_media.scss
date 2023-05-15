@@ -1,0 +1,42 @@
+@media (max-width: 420px) {
+    html {
+        font-size: 50%;
+    }
+
+    #header {
+        & > h1 {
+            font-size: 3.2rem;
+        }
+        
+        & > .today > .today-text {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+
+@media (max-width: 360px) {
+    html {
+        font-size: 36%;
+    }
+
+    .dday-list {
+        & > .thumb {
+            margin-right: 10px;
+        }
+        .dday-wrap > .dday {
+            margin-right: 10px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .dday-list {
+        & > .thumb {
+            margin-right: 0;
+        }
+        .dday-wrap > .dday {
+            margin-right: 0;
+        }
+    }
+}
