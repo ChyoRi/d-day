@@ -69,6 +69,13 @@ const fadeOut = (el) => {
 // 서버에 있는 리스트 조회
 const getList = async () => {
     let { data } = await axios.get(url + '.json');
+
+    // data가 null인 경우 빈 배열로 처리
+    if (!data) {
+        render([]);
+        return;
+    }
+    
     let keys = Object.keys(data);
     let values = Object.values(data);
     let result = values?.map((item, i) => ({...item, id: keys[i]}));
