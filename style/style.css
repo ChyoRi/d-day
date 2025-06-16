@@ -176,6 +176,11 @@ input:focus {
   font-size: 1.7rem;
   background-color: transparent;
 }
+.date-wrap > label {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
 .date-wrap i {
   display: none;
 }

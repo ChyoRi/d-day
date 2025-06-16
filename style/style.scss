@@ -71,6 +71,10 @@
         background-color : transparent;
     }
 
+    & > label {
+        @include flex(center, flex-start);
+    }
+
     & i {
         display: none;
     }
