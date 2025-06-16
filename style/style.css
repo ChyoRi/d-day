@@ -172,7 +172,6 @@ input:focus {
   font-size: 1.7rem;
 }
 .date-wrap input[type=date] {
-  display: none;
   font-family: "NanumSquareRoundEB";
   font-size: 1.7rem;
 }

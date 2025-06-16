@@ -212,17 +212,16 @@ const vaildate = () => {
 }
 
 // 달력 input 보이기
-
-const dateInputOn = () => {
-    dateInput.style.display = 'block';
-}
+// const dateInputOn = () => {
+//     dateInput.style.display = 'block';
+// }
 
 // 이벤트 리스너
 plusButton.addEventListener('click', modalOpen);
 modalBackground.addEventListener('click', modalClose);
 createModalCloseButton.addEventListener('click', modalClose);
 submitButton.addEventListener('click', vaildate);
-dateLabel.addEventListener('click', dateInputOn);
+// dateLabel.addEventListener('click', dateInputOn);
 
 // init
 init();
