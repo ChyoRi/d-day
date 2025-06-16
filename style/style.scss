@@ -73,6 +73,7 @@
 
     & > label {
         @include flex(center, flex-start);
+        gap: 0 10px;
     }
 
     & i {
