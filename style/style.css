@@ -40,7 +40,6 @@ input:focus {
   background-position: center;
   background-size: cover;
   position: relative;
-  max-width: 480px;
   height: 100%;
   margin: 0 auto;
 }
@@ -262,7 +261,7 @@ input:focus {
 }
 .dday-list .dday-wrap > .dday {
   margin-right: 6%;
-  color: #fe8b87;
+  color: #A0BEF2;
   font-family: "NanumSquareRoundEB";
   font-size: 3rem;
   white-space: nowrap;
@@ -272,7 +271,7 @@ input:focus {
   padding: 10px;
   font-size: 1.8rem;
   border-radius: 5px;
-  background-color: #fe8b87;
+  background-color: #A0BEF2;
   color: #fff;
   white-space: nowrap;
 }
