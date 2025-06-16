@@ -1,6 +1,9 @@
 // Firebase 서버 URL
 const url = 'https://youngchul-57854-default-rtdb.firebaseio.com/dday/dayList';
 
+// ios 확인
+const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
+
 // REF
 const headerToday = document.querySelector('.today-text'); // 해더 오늘 날짜
 const listContainer = document.querySelector('.dday-list-wrap'); // D-Day가 뿌려질 컨테이너
@@ -13,6 +16,7 @@ const createInput = document.querySelector('#date'); // D-Day 추가 모달에 D
 const submitButton = document.querySelector('.add'); // D-Day 추가 모달에 저장 버튼
 const dateLabel = document.querySelector('label[for="date"]');
 const dateInput = document.querySelector('input[type="date"]');
+const calrendarIcon = document.querySelector('.date-wrap i');
 
 const delay = (s) => {
     return new Promise((success) => {
@@ -75,7 +79,7 @@ const getList = async () => {
         render([]);
         return;
     }
-    
+
     let keys = Object.keys(data);
     let values = Object.values(data);
     let result = values?.map((item, i) => ({...item, id: keys[i]}));
@@ -218,10 +222,10 @@ const vaildate = () => {
     submit({title, date, result});
 }
 
-// 달력 input 보이기
-// const dateInputOn = () => {
-//     dateInput.style.display = 'block';
-// }
+// ios에서 date input 처리
+if (isIOS) {
+  calrendarIcon.style.display = 'block';
+}
 
 // 이벤트 리스너
 plusButton.addEventListener('click', modalOpen);

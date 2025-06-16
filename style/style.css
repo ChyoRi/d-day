@@ -176,6 +176,9 @@ input:focus {
   font-size: 1.7rem;
   background-color: transparent;
 }
+.date-wrap i {
+  display: none;
+}
 
 .add {
   width: 100%;
