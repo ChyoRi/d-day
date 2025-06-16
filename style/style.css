@@ -174,6 +174,7 @@ input:focus {
 .date-wrap input[type=date] {
   font-family: "NanumSquareRoundEB";
   font-size: 1.7rem;
+  background-color: transparent;
 }
 
 .add {
